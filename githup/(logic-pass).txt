@@ -1,0 +1,39 @@
+Q1//
+str = "Engineering"
+  
+
+print ("Original string: " + str) 
+  
+
+res_str = str.replace('e', '') 
+  
+
+# removes all occurrences of 'e' 
+print ("The string after removal of character: " + res_str) 
+  
+# Removing 1st occurrence of e 
+
+res_str = str.replace('e', '', 1) 
+   
+print ("The string after removal of character: " + res_str) 
+#_______________________________________________________________________________
+Q2//
+#Read user input 
+min = int(input("Enter the min : "))
+ max = int(input("Enter the max : ")) 
+for n in range(min,max + 1):
+	 if n > 1: 
+		for i in range(2,n): 
+			if (n % i) == 0: 
+				break else: 
+					print(n)
+
+#____________________________________________________________________________________
+Q3//
+import collections 
+str1 = 'thequickbrownfoxjumpsoverthelazydog' 
+d = collections.defaultdict(int) 
+for c in str1: d[c] += 1 
+for c in sorted(d, key=d.get, reverse=True): 
+	if d[c] > 1:
+		 print('%s %d' % (c, d[c]))
